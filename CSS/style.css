@@ -18,6 +18,7 @@ body {
     font-family: 'Aparajika';
     background-color: #162230;
     color: #ffffff;
+    overflow-x: hidden;
 }
 
 header {
@@ -521,10 +522,16 @@ footer {
     padding: 20px 0;
     background-color: #162230;
     text-align: center;
+    align-items: center;
     font-size: 1.2em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+
+    section {
+        width: 100%;
+    }
+
     .name {
         font-size: 2.5em;
     }
@@ -539,9 +546,11 @@ footer {
     }
 
     .home {
+        display: flex;
         flex-direction: column;
         text-align: center;
-        padding: 0 2em;
+        margin: 0 auto;
+        padding: 0 10px;
     }
 
     .home-content {
@@ -549,8 +558,12 @@ footer {
         margin-top: 100px;
     }
 
+    .home h2 {
+        padding: 0 100px;
+    }
+
     .home p {
-        padding: 5px;
+        padding: 0 60px;
     }
 
     .home-btn {
@@ -575,20 +588,31 @@ footer {
         margin-top: 60px;
     }
 
+    .capsule-container {
+        margin: 0 auto;
+    }
+
     .skills-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
         justify-items: center;
+        width: 100%;
     }
 
     .skill {
-        width: 100px;
+        width: 135px;
+    }
+
+    .last-skill {
+        grid-column: span 2;
+        justify-self: center;
     }
 
     .circle {
         width: 140px;
         height: 140px;
+        justify-items: center;
     }
 
     .circle::before {
@@ -605,6 +629,24 @@ footer {
     .skills-container:only-child {
         display: flex;
         justify-content: center;
+    }
+
+    footer {
+        padding-left: 50px;
+    }
+
+    .large-dot {
+        width: 15px;
+        height: 15px;
+    }
+
+    .small-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .skills-section h2 {
+        font-size: 2em;
     }
 }
 
