@@ -18,7 +18,6 @@ body {
     font-family: 'Aparajika';
     background-color: #162230;
     color: #ffffff;
-    overflow-x: hidden;
 }
 
 header {
@@ -543,6 +542,8 @@ footer {
 
     .header .navbar a {
         visibility: hidden;
+        width: 100%;
+
     }
 
     .home {
@@ -556,6 +557,7 @@ footer {
     .home-content {
         margin-bottom: 20px;
         margin-top: 100px;
+        width: 100%;
     }
 
     .home h2 {
@@ -569,6 +571,7 @@ footer {
     .home-btn {
         display: flex;
         justify-content: center;
+        width: 100%;
     }
 
     .home-logo {
@@ -590,6 +593,20 @@ footer {
 
     .capsule-container {
         margin: 0 auto;
+
+    }
+
+    .capsule{
+        align-items: center;
+        height: 620px;
+    }
+
+    .project .project-content h3{
+        margin-top: 1em;
+    }
+ 
+    .capsule-container .capsule {
+        width: 350px;
     }
 
     .skills-container {
@@ -597,7 +614,6 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
         justify-items: center;
-        width: 100%;
     }
 
     .skill {
@@ -631,10 +647,6 @@ footer {
         justify-content: center;
     }
 
-    footer {
-        padding-left: 50px;
-    }
-
     .large-dot {
         width: 15px;
         height: 15px;
@@ -648,6 +660,7 @@ footer {
     .skills-section h2 {
         font-size: 2em;
     }
+
 }
 
 @media (max-width: 1400px) {
