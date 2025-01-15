@@ -12,3 +12,20 @@ tags.forEach(tag => {
         tag.style.cursor = 'default';
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    let videos = document.querySelectorAll('video');
+    let observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.play();
+            } else {
+                entry.target.pause();
+            }
+        });
+    }, { threshold: 0.5 });
+
+    videos.forEach(video => {
+        observer.observe(video);
+    });
+});

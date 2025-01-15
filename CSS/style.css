@@ -596,15 +596,15 @@ footer {
 
     }
 
-    .capsule{
+    .capsule {
         align-items: center;
         height: 620px;
     }
 
-    .project .project-content h3{
+    .project .project-content h3 {
         margin-top: 1em;
     }
- 
+
     .capsule-container .capsule {
         width: 350px;
     }
