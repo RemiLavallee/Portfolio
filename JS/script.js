@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                entry.target.load();
                 entry.target.play();
             } else {
                 entry.target.pause();
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { threshold: 0.5 });
 
     videos.forEach(video => {
+        video.muted = true; 
         observer.observe(video);
     });
 });
